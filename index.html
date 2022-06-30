@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Stick+No+Bills:wght@400;600&display=swap" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+        <!-- CSS de Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <title>Saga NieR</title>
+        <style>
+            body {
+                font-family: "Lato", sans-serif;
+            }
+            nav {
+                position: relative;
+                display: flex;
+            }
+            p {
+                font-family: "Lato", sans-serif;
+                font-size: 20px;
+            }
+            .contnav {
+                background-color: #51593f;
+                color: #f2f2f2;
+            }
+            .overlay {
+                font-family: "Stick No Bills", sans-serif;
+                position: absolute;
+                z-index: 12;
+                color: #fff;
+                left: 50%;
+                padding-top: 20%;
+                text-shadow: 2px 2px 5px black;
+            }
+            h1 {
+                font-size: 5rem;
+            }
+            h2 {
+                font-family: "Stick No Bills", sans-serif;
+                font-size: 80px;
+            }
+            h3 {
+                font-family: "Lato", sans-serif;
+            }
+            .uno {
+                background-color: #f2f2f2;
+            }
+            .im {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .fondo-claro {
+                background-color: #f2f2f2;
+            }
+            .accordion-button:not(.collapsed) {
+                background: #d9ccb4;
+                color: #0d000d;
+                font-weight: 600;
+            }
+            .en-fondo-negro {
+                color: #f2f2f2;
+                background-color: #0d000d;
+            }
+            .nav-pills .nav-link.active,
+            .nav-pills .show > .nav-link {
+                color: #f2f2f2;
+                background-color: #2b3a19;
+            }
+            a.nav-link {
+                color: #f2f2f2;
+            }
+            span.fs-4 {
+                color: #f2f2f2;
+            }
+            a.nav-link:hover {
+                color: #a39b36;
+            }
+            footer {
+                background-color: #51593f;
+                color: #f2f2f2;
+                padding-top: 3%;
+                padding-bottom: 3%;
+            }
+            p.fo {
+                font-size: 15px;
+            }
+            a {
+                text-decoration: none;
+                color: #f2f2f2;
+            }
+            a:hover {
+                color: #a39b36;
+            }
+            @media (max-width: 700px) {
+                h1 {
+                    font-size: 25px;
+                }
+                h3 {
+                    font-size: 15px;
+                }
+                h2 {
+                    font-size: 30px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <div class="sticky-top contnav">
+            <nav class="container d-flex flex-wrap justify-content-center py-3">
+                <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #f2f2f2;">
+                        <path
+                            d="M24,13.6v-3.2c-1.7-0.6-2.7-0.8-3.2-2v0c-0.5-1.3,0.1-2.1,0.8-3.7l-2.3-2.3c-1.6,0.7-2.4,1.4-3.7,0.8h0
+                    c-1.3-0.5-1.4-1.6-2-3.2h-3.2c-0.6,1.6-0.7,2.7-2,3.2h0C7.1,3.7,6.2,3.1,4.7,2.4L2.4,4.7c0.7,1.6,1.4,2.4,0.8,3.7
+                    c-0.5,1.3-1.6,1.4-3.2,2v3.2c1.6,0.6,2.7,0.7,3.2,2c0.5,1.3-0.1,2.2-0.8,3.7l2.3,2.3c1.6-0.7,2.4-1.4,3.7-0.8h0
+                    c1.3,0.5,1.4,1.6,2,3.2h3.2c0.6-1.6,0.8-2.7,2-3.2h0c1.3-0.5,2.1,0.1,3.7,0.9l2.3-2.3c-0.7-1.6-1.4-2.4-0.8-3.7
+                    C21.3,14.4,22.4,14.2,24,13.6z M12,16c-2.2,0-4-1.8-4-4s1.8-4,4-4s4,1.8,4,4S14.2,16,12,16z"
+                        />
+                    </svg>
+                    <span class="fs-4"> Inicio</span>
+                </a>
+
+                <ul class="nav nav-pills">
+                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Juegos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Autor</a></li>
+                </ul>
+            </nav>
+        </div>
+        <header>
+            <div class="container-fluid g-0">
+                <div class="overlay">
+                    <div style="position: relative; left: -50%;">
+                        <h1 class="text-center">Saga NieR</h1>
+                        <h3 class="text-center">Web recopilatoria de la saga de videojuegos NieR</h3>
+                    </div>
+                </div>
+                <div id="probandoCarrusel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/header1.webp" class="d-block w-100" alt="Primera portada, contiene una imagen de nier automata" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/header2.webp" class="d-block w-100" alt="Segunda portada, contiene una imagen de nier replicant" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/header3.webp" class="d-block w-100" alt="Tercera portada, contiene una imagen de nier gestalt" />
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/header4.webp" class="d-block w-100" alt="cuarta portada, contiene una imagen de nier reincarnation" />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#probandoCarrusel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#probandoCarrusel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="uno">
+            <div class="container py-4" id="1">
+                <div class="container p-5">
+                    <h2 class="text-end"><strong>NieR Gestalt</strong></h2>
+                </div>
+                <div class="row align-items-md-stretch">
+                    <div class="col-md-6">
+                        <div class="h-100 p-5">
+                            <p>
+                                NieR Gestalt es un juego derivado del Final E: End of the dragon sphere del juego Drakengard para PlayStation 2, en el cual los eventos del mismo dejaron al planeta Tierra en un estado de decadencia,
+                                convirtiéndolo en un spin-off de la saga.<br />
+                                <br />
+
+                                Un videojuego aparte titulado NieR RepliCant fue desarrollado solo para ser lanzado en Japón el 24 de abril de 2010 y exclusivamente para PlayStation 3. Ambos juegos están basados en el mismo mundo, pero solo
+                                difieren en el protagonista y en su relación con el personaje Yonah, además del tiempo en el que los dos juegos toman lugar son distintos.
+                            </p>
+
+                            <p>
+                                <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                    Más info
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="h-100 p-5">
+                            <img src="img/nierg.webp" class="im" style="width: 80%;" alt="Carátula videojuego nier gestalt para ps3" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body" style="padding: 0%;">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Historia
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        El jugador encarna el papel de un padre en un futuro distópico donde seres llamados "Sombras" intentan atacarlo a él y su hija Yonah, la cual padece una enfermedad llamada "Necrosis rúnica". Para
+                                        evitar esto, el protagonista hace uso de los poderes de un extraño libro para combatirlas. Luego de la batalla y un flashback al futuro, se nos cuenta como el padre ahora vive con su hija en un
+                                        pacífico pueblo. La misión ahora del jugador será intentar encontrar una cura para la enfermedad de su hija con la ayuda del libro Grimore Weiss.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Personajes
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/g1.webp" style="width: 100%;" alt="Se muestra el aspecto del personaje principal" />
+
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Jugador/Protagonista</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/g2.webp" style="width: 100%;" alt="Se muestra el aspecto de Yonah, la hija del protagonista" />
+
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Yonah</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/g3.webp" style="width: 100%;" alt="Se muestra el aspecto del libro mágico Grimore Weiss" />
+
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Grimore Weiss</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/g4.webp" style="width: 100%;" alt="Se muestra el aspecto del personaje Kainé" />
+
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Kainé</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/g5.webp" style="width: 100%;" alt="Se muestra el aspecto del personaje Emil" />
+
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Emil</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/g6.webp" style="width: 100%;" alt="Se muestra al aspecto de Devola y Popola" />
+
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Devola y Popola</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid g-0">
+            <img src="img/inter1.webp" style="width: 100%;" alt="Imagen intermedia donde se muestra la dualidad de los dos protagonistas de las versiones del juego RepliCant y Gestalt" />
+        </div>
+        <div class="dos en-fondo-negro">
+            <div class="container py-4" id="2">
+                <div class="container p-5">
+                    <h2 class="text-start"><strong>NieR RepliCant</strong></h2>
+                </div>
+                <div class="row align-items-md-stretch">
+                    <div class="col-md-6">
+                        <div class="h-100 p-5">
+                            <img src="img/716Apq6EN0L._SL1500_.webp" class="im" style="width: 80%;" alt="Carátula del videojuego Nier RepliCant para la consola PS4" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="h-100 p-5">
+                            <p>
+                                NieR Replicant ver.1.22474487139... (ニーア レプリカント, lit. Nīa Repurikanto) es, según Yoko Taro, una "versión mejorada" del primer juego de la franquicia: NieR RepliCant. Fue anunciado durante la
+                                celebración del décimo aniversario de la saga, el 29 de marzo de 2020.
+                            </p>
+
+                            <p>
+                                <button class="btn btn-outline-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                    Más info
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body" style="padding: 0%;">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Historia
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="color: #0d000d;">
+                                    <div class="accordion-body">
+                                        La historia se mantiene respecto del original Nier RepliCant que salío al mismo tiempo que Nier Gestalt, aunque el primero sólo estuvo en Japón. Sin embargo, existen nuevas cinemáticas y un final
+                                        totalmente nuevo (E).
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Personajes
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" style="color: #0d000d;">
+                                    <div class="accordion-body">
+                                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/r1.webp" style="width: 100%;" alt="Se muestra el protagonista de la version Nier RepliCant remasterizada" />
+
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Jugador/Protagonista</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/r2.webp" style="width: 100%;" alt="Se muestra a Yonah, la hermana del plotagonista en la version replicant de nier" />
+
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Yonah</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/r3.webp" style="width: 100%;" alt="Se muestra el aspecto del libro mágico Grimore Weiss de la version Nier Replicant" />
+
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Grimore Weiss</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/r4.webp" style="width: 100%;" alt="Se muestra la apariencia de Kainé en la version Replicant remasterizada" />
+
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Kainé</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/r5.webp" style="width: 100%;" alt="Se muestra la apariencia de Emil de la version Replicant remasterizada" />
+
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Emil</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/g6.webp" style="width: 100%;" alt="Se muestra la apariencia de Devola y Popola en la version remasterizada de Replicant" />
+
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Devola y Popola</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid g-0">
+            <img src="img/inter2.webp" style="width: 100%;" alt="Segunda imagen intermedia que muestra una recreacion artistica de un combate de Nier Automata" />
+        </div>
+        <div class="tres">
+            <div class="container py-4" id="3">
+                <div class="container p-5">
+                    <h2 class="text-end"><strong>NieR Automata</strong></h2>
+                </div>
+                <div class="row align-items-md-stretch">
+                    <div class="col-md-6">
+                        <div class="h-100 p-5">
+                            <p>
+                                NieR: Automata (ニーア オートマタ Nīa Ōtomata?) es un videojuego de rol de acción desarrollado por PlatinumGames y publicado por Square Enix para PlayStation 4, Microsoft Windows y Xbox One, y próximamente se
+                                publicará para Nintendo Switch. Aunque en un principio la distribuidora planeó su lanzamiento para noviembre de 2016, finalmente lo publicó el 23 de febrero de 2017 en Japón. La edición de consola se publicó
+                                el 7 de marzo en Norteamérica y el 10 de ese mes en el resto del mundo. La versión de Microsoft Windows se publicó el 17 de marzo en Steam. El juego se lanzó en la consola Xbox One el 26 de junio de 2018. La
+                                versión de Nintendo Switch será lanzada el 6 octubre de 2022.
+                            </p>
+
+                            <p>
+                                <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                    Más info
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="h-100 p-5">
+                            <img src="img/automata.webp" class="im" style="width: 80%;" alt="Caratula del videojuego Nier Automata para la consola PS4" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body" style="padding: 0%;">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Historia
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Nier: Automata comparte el mismo universo postapocalíptico que el primer Nier y toma lugar luego del cuarto final de este último videojuego. Aunque contiene referencias con la serie Drakengard en
+                                        cuanto a su atmósfera oscura y la ramificación de su historia, no guarda conexión narrativa con dicha saga. Situada miles de años luego de los eventos que ocurrieron en Nier, la historia gira en torno
+                                        a una guerra entre los androides remanentes de la humanidad y un ejército de máquinas invasoras de otro mundo.​ La irrupción inicial de éstas obligó a la población de la Tierra a huir hacia la Luna.​
+                                        Con el fin de volver a recuperar el planeta, la humanidad creó el escuadrón «YoRHa», una unidad integrada por androides de combate con el fin de luchar en una guerra subsidiaria. Aunque a éstos les
+                                        niegan las emociones y carecen de nombres reales, tienen actitudes particulares por las que se les puede distinguir.​ A los androides se les comanda desde el "Búnker", la sede de la escuadrilla de
+                                        infantería automatizada YoRHa, que está en órbita sobre el planeta y establece una resistencia auto-suficiente en la Tierra para hacer retroceder a las máquinas.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Personajes
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/a1.webp" style="width: 100%;" alt="Se muestra la apariendia del personaje 2B" />
+
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>2B</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/a2.webp" style="width: 100%;" alt="Se muestra la apariendia del personaje 9S" />
+
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>9S</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/a3.webp" style="width: 100%;" alt="Se muestra la apariendia del personaje A2" />
+
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>A2</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/a4.webp" style="width: 100%;" alt="Se muestra la apariendia del los personajes Adán y Eva" />
+
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Adán y Eva</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/a5.webp" style="width: 100%;" alt="Se muestra la apariendia del los personajes Devola y Popola" />
+
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Devola y Popola</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card shadow-sm">
+                                                    <img src="img/a6.webp" style="width: 100%;" alt="Se muestra la apariendia del personaje robot Pascal" />
+
+                                                    <div class="card-body">
+                                                        <p class="text-center"><strong>Pascal</strong></p>
+                                                        <div class="d-flex justify-content-between align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row py-3">
+                    <div class="col text-center">
+                        <small>
+                            <a href="https://github.com/fant4sma" target="_blank">Camila González</a> | 30 de Junio, 2022<br />
+                            Proyecto final <a href="https://github.com/profesorfaco/front-end" target="_blank">Introducción al Desarrollo Front End con HTML, CSS y JavaScript</a> | Universidad de Chile
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
